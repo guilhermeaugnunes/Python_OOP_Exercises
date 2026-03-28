@@ -8,8 +8,8 @@ class FazBolo():
         if temperatura not in ["alta", "media", "baixa"]:
             print("Temperatura inválida. Por favor, escolha entre 'alta', 'media' ou 'baixa'.")
             return
-        if tempo <= 0 or tempo > 90:
-            print("Tempo inválido. Por favor, insira um tempo positivo e menor ou igual a 90.")
+        if tempo <= 0 or tempo > 180:
+            print("Tempo inválido. Por favor, insira um tempo positivo e menor ou igual a 180.")
             return
         else:
             self.temperatura = temperatura
@@ -17,7 +17,7 @@ class FazBolo():
             
         print(
             f" Você está querendo assar o bolo de massa com recheio de {self.recheio} e cobertura de {self.cobertura} no fogo temperatura por "
-            f"{tempo} minutos“, sendo {tempo} e {temperatura} inseridos pelo usuário"
+            f"{tempo} minutos, sendo {tempo} e {temperatura} inseridos pelo usuário"
         )
         
         if temperatura == "alta":

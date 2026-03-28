@@ -6,7 +6,7 @@ def main():
     print("\n")
 
     Bolo2 = FazBolo("Chocolate", "Doce de Leite", "Brigadeiro")
-    Bolo2.assar("alta", 10)
+    Bolo2.assar("alta", 100000)
 
     print("\n")
 

@@ -8,6 +8,7 @@ bin/
 include/
 lib/
 share/
+.vs/
 .vscode/
 .DS_Store
 Thumbs.db
