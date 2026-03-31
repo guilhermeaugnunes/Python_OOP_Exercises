@@ -1,0 +1,28 @@
+classDiagram
+    class Veiculo {
+        +marca: str
+        +modelo: str
+        +ano_fabricacao: int
+        +__init__(marca, modelo, ano_fabricacao)
+        +exibir_info()
+    }
+
+    class Carro {
+        +numero_portas: int
+        +__init__(numero_portas)
+    }
+    
+    class Moto {
+        +cilindrada: int
+        +__init__(cilindrada)
+    }
+    
+    class Caminhao {
+        +capacidade_carga_toneladas: int
+        +__init__(capacidade_carga_toneladas)
+    }
+
+
+    Veiculo <|-- Carro
+    Veiculo <|-- Moto
+    Veiculo <|-- Caminhao
