@@ -8,8 +8,8 @@ class Veiculo:
             raise TypeError ("O modelo não pode ser vazio.")
         self.modelo = modelo
 
-        if not isinstance(ano_fabricacao, int):
-            raise TypeError ("Digite o ano corretamente")
+        if ano_fabricacao not in range (1886, 2025):
+            raise TypeError ("Digite um ano válido")
         self.ano_fabricacao = ano_fabricacao
 
     def exibir_info(self):
@@ -36,3 +36,14 @@ class Moto(Veiculo):
     def exibir_info(self):
         super().exibir_info()
         print(f"Cilindrada: {self.cilindrada}")
+
+class Caminhao(Veiculo):
+    def __init__(self, marca: str, modelo: str, ano_fabricacao: int, capacidade_carga_toneladas: int):
+        super().__init__(marca, modelo, ano_fabricacao)
+        if capacidade_carga_toneladas <= 0:
+            raise ValueError ("A capacidade de carga deve ser maior que 0")
+        self.capacidade_carga_toneladas = capacidade_carga_toneladas
+
+    def exibir_info(self):
+        super().exibir_info()
+        print(f"Capacidade de carga: {self.capacidade_carga_toneladas} toneladas")

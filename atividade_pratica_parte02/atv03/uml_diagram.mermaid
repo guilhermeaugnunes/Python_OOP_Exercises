@@ -1,0 +1,32 @@
+classDiagram
+    class Funcionario {
+        +nome: str
+        +matricula: int
+        +calcular_pagamento()
+    }
+
+    class Assalariado {
+        +salario_fixo
+        +calcular_pagamento()
+    }
+        
+    class Horista {
+        +valor_hora
+        +calcular_pagamento()
+    }
+
+    class Comissionado {
+        +salario_base
+        +total_vendas
+        +percentual_comissao
+        +calcular_pagamento()
+    }
+
+    class Financeiro {
+        +nome_departamento
+        +processarPagamento(funcionario)
+    }
+
+    Funcionario <|-- Assalariado
+    Funcionario <|-- Horista
+    Funcionario <|-- Comissionado
