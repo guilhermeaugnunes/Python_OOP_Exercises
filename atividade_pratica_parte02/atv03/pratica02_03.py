@@ -60,8 +60,6 @@ class Financeiro:
     def processar_pagamento(self, funcionario: Funcionario):
         funcionario.calcular_pagamento()
         print(
-            f"Departamento {self.nome_departamento} processou o pagamento de {funcionario.nome}"
-            f"Matrícula: {funcionario.matricula} | Valor: R$ {funcionario.calcular_pagamento}"
+            f"Departamento {self.nome_departamento} processou o pagamento de {funcionario.nome},"
+            f" Matrícula: {funcionario.matricula} | Valor: R$ {funcionario.calcular_pagamento()}"
         )
-
-        ##Falta validar a´porcentagem da comissao
