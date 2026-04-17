@@ -1,4 +1,4 @@
-from exemplo_aula08 import *
+from exemplos_sala.exemplo_aula08.exemplo_aula08 import *
 
 def main():
     transporte1 = TransporteRodoviario(800, 5)
